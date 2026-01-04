@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predictive 4D/5D Construction Digital Twins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Predictive 4D/5D Construction Digital Twins that integrate BIM, schedule, cost and site data to forecast delays, risks and cost overruns.">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #1e293b;
+      --accent: #2563eb;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ---------- HERO ---------- */
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: var(--white);
+      padding: 100px 0;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      color: #e5e7eb;
+      margin-bottom: 35px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      padding: 14px 30px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .cta:hover {
+      background: #1d4ed8;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 90px 0;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 850px;
+      color: var(--secondary);
+      margin-bottom: 30px;
+    }
+
+    /* ---------- PROBLEM ---------- */
+    .problems {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .problem-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .problem-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .problem-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ---------- SOLUTION ---------- */
+    .solution {
+      background: #0f172a;
+      color: var(--white);
+    }
+
+    .solution p {
+      color: #d1d5db;
+    }
+
+    .solution-list {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .solution-box {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .solution-box h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    /* ---------- DIFFERENTIATION ---------- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    table th, table td {
+      padding: 18px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    table th {
+      background: #f1f5f9;
+    }
+
+    /* ---------- MARKET ---------- */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .stat {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    /* ---------- CTA ---------- */
+    .final-cta {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header>
+  <div class="container">
+    <h1>Predictive 4D / 5D Construction Digital Twins</h1>
+    <p>
+      Move beyond static BIM visuals. We design and implement predictive construction
+      digital twins that integrate BIM, schedule, cost, and site data to forecast delays,
+      risks, and cost overruns—before they happen.
+    </p>
+    <a href="#contact" class="cta">Request a Strategy Call</a>
+  </div>
+</header>
+
+<!-- PROBLEM -->
+<section>
+  <div class="container">
+    <h2>The Industry Problem</h2>
+    <p>
+      The construction industry is saturated with “digital twin” promises—but most solutions
+      stop at visualization. Contractors and owners are left with static 4D animations,
+      disconnected cost data, and dashboards that explain the past instead of predicting the future.
+    </p>
+
+    <div class="problems">
+      <div class="problem-card">
+        <h3>Buzzword Twins</h3>
+        <p>Most digital twins are static BIM models or one-time 4D simulations with no live feedback.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Disconnected Systems</h3>
+        <p>BIM, schedule, cost, and site data live in silos with manual, error-prone updates.</p>
+      </div>
+      <div class="problem-card">
+        <h3>No Prediction</h3>
+        <p>Tools show what happened—not what will slip, overrun, or collide next.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Unclear ROI</h3>
+        <p>Executives struggle to justify digital twin investment without measurable outcomes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution">
+  <div class="container">
+    <h2>The Predictive Twin Approach</h2>
+    <p>
+      We specialize in operational, construction-phase digital twins—designed as
+      decision-support systems, not marketing visuals.
+    </p>
+
+    <div class="solution-list">
+      <div class="solution-box">
+        <h3>Automated 4D / 5D Data Pipelines</h3>
+        <p>Live integration of BIM, schedules (Primavera/MS Project), cost systems, and progress updates.</p>
+      </div>
+      <div class="solution-box">
+        <h3>Predictive Analytics Layer</h3>
+        <p>Forecast schedule slippage, cost variance, and trade congestion using data-driven logic.</p>
+      </div>
+      <div class="solution-box">
+        <h3>Operational Digital Twins</h3>
+        <p>Near-real-time twins that evolve with construction—not obsolete after a few weeks.</p>
+      </div>
+      <div class="solution-box">
+        <h3>ROI-Focused Decision Support</h3>
+        <p>Dashboards and simulations tied to delay reduction, claims avoidance, and cash-flow certainty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATION -->
+<section>
+  <div class="container">
+    <h2>How This Is Different</h2>
+    <p>
+      Major platforms sell powerful software. We design and implement the predictive workflows
+      that make those platforms actually work on real projects.
+    </p>
+
+    <table>
+      <tr>
+        <th>Typical Market Offerings</th>
+        <th>Our Specialization</th>
+      </tr>
+      <tr>
+        <td>4D animations for presentations</td>
+        <td>Live 4D systems updated throughout construction</td>
+      </tr>
+      <tr>
+        <td>5D used for one-time quantity checks</td>
+        <td>Continuous cost forecasting & variance tracking</td>
+      </tr>
+      <tr>
+        <td>Visualization-focused dashboards</td>
+        <td>Predictive risk & scenario intelligence</td>
+      </tr>
+      <tr>
+        <td>Software licenses</td>
+        <td>End-to-end predictive workflow engineering</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- MARKET VALIDATION -->
+<section>
+  <div class="container">
+    <h2>Market Validation</h2>
+    <p>
+      Digital twin and 4D/5D BIM adoption is accelerating, but implementation remains immature—
+      creating a significant opportunity for specialized predictive services.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <h3>$90B+</h3>
+        <p>Projected digital twin market size by 2029</p>
+      </div>
+      <div class="stat">
+        <h3>69%</h3>
+        <p>Firms investing in digital twins—but few operational</p>
+      </div>
+      <div class="stat">
+        <h3>16%</h3>
+        <p>With extensive, real-world deployment</p>
+      </div>
+      <div class="stat">
+        <h3>High ROI</h3>
+        <p>When tied to delay & cost risk reduction</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <div class="container">
+    <h2>Turn Digital Twins into Predictive Decision Systems</h2>
+    <p>
+      If you are tired of static models and want measurable improvements in schedule reliability,
+      cost certainty, and risk management—let’s talk.
+    </p>
+    <a href="#" class="cta">Book a Discovery Call</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Predictive Construction Digital Twins • Specialist 4D/5D Workflow Engineering</p>
+</footer>
+
+</body>
+</html>
