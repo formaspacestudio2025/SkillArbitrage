@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIM Data Engineering & Integration Specialist | Construction Data Solutions</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-light: #e5e7eb;
+            --success-color: #10b981;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-alt {
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-light);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.25rem 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .service-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-timeline {
+            background: var(--bg-light);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: inline-block;
+        }
+
+        /* Who It's For */
+        .target-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .target-card {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .target-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .target-card p {
+            color: var(--text-light);
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--success-color), #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .benefit-item h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-item p {
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact-cta {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #374151 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .contact-cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .contact-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .target-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .contact-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            .hero {
+                padding: 6rem 0;
+            }
+
+            .section {
+                padding: 5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">BIM DataPro</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#who">Who We Serve</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your BIM Data Into Construction Intelligence</h1>
+                <p class="subtitle">Stop Wrestling With Data. Start Making Better Decisions.</p>
+                <p>We eliminate data chaos, automate workflows, and deliver predictive insights that save time and reduce costs for construction teams.</p>
+                <a href="#contact" class="cta-button">Get Your Free Data Audit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Three proven offers designed to transform your construction data challenges into competitive advantages</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>BIM Data Cleanup & Automation Sprint</h3>
+                    <p>Get clean, structured data and automated workflows in just 30 days. Perfect for teams tired of manual exports and data chaos.</p>
+                    
+                    <ul class="service-features">
+                        <li>Clean, structured BIM data model</li>
+                        <li>Automated data flows (no more manual exports)</li>
+                        <li>Single source of truth for project data</li>
+                        <li>Live dashboards and reporting</li>
+                    </ul>
+                    
+                    <div class="service-price">₹1.2L - ₹6L</div>
+                    <div class="service-timeline">⏱ 2-4 weeks delivery</div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>4D/5D Data-Connected BIM System</h3>
+                    <p>Live integration of schedule and cost data with your BIM models. See delays and overruns before they become problems.</p>
+                    
+                    <ul class="service-features">
+                        <li>Live 4D (time) + 5D (cost) BIM integration</li>
+                        <li>Automatic schedule & cost updates</li>
+                        <li>Visual variance tracking</li>
+                        <li>Delay impact visualization</li>
+                    </ul>
+                    
+                    <div class="service-price">₹6L - ₹18L+</div>
+                    <div class="service-timeline">⏱ 6-8 weeks delivery</div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">🔮</div>
+                    <h3>Predictive BIM Digital Twin</h3>
+                    <p>Advanced decision intelligence system that predicts problems before they happen. Get early warnings, not post-mortems.</p>
+                    
+                    <ul class="service-features">
+                        <li>Predictive BIM-based digital twin</li>
+                        <li>Early-warning system for delays & costs</li>
+                        <li>Scenario simulation tools</li>
+                        <li>Executive decision dashboards</li>
+                    </ul>
+                    
+                    <div class="service-price">₹15L - ₹50L+</div>
+                    <div class="service-timeline">⏱ 3-4 months delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section id="who" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Who We Work With</h2>
+                <p>Construction professionals who demand better data and faster insights</p>
+            </div>
+            
+            <div class="target-grid">
+                <div class="target-card">
+                    <h3>🏗️ General Contractors</h3>
+                    <p>Stop losing time on manual data exports and disconnected systems. Get integrated workflows that save hours every week.</p>
+                </div>
+                
+                <div class="target-card">
+                    <h3>📋 Project Managers</h3>
+                    <p>Make data-driven decisions with live dashboards that show real project status, not outdated reports.</p>
+                </div>
+                
+                <div class="target-card">
+                    <h3>🏢 Construction Consultants</h3>
+                    <p>Offer premium data services to your clients with automated BIM workflows and predictive analytics.</p>
+                </div>
+                
+                <div class="target-card">
+                    <h3>🏛️ Owner Organizations</h3>
+                    <p>Get transparency into your projects with early-warning systems that prevent costly surprises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Approach</h2>
+                <p>We're not just BIM modelers. We're construction data problem solvers with real-world experience.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Immediate ROI</h3>
+                    <p>See time savings and improved accuracy within weeks, not months. Our clients typically save 10+ hours per week.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>No Tool Changes</h3>
+                    <p>Work with your existing BIM tools and workflows. We enhance what you have, not replace it.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Scalable Solutions</h3>
+                    <p>Start small with quick wins, then scale up to enterprise-level predictive systems as you grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="contact-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Construction Data?</h2>
+            <p>Get started with a free data audit and see how much time you can save</p>
+            <div class="contact-buttons">
+                <a href="mailto:hello@bimdatapro.com" class="cta-button">Get Free Data Audit</a>
+                <a href="tel:+919876543210" class="btn-secondary">Call: +91 98765 43210</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BIM DataPro. Construction Data Problem Solvers.</p>
+        </div>
+    </footer>
+</body>
+</html>
