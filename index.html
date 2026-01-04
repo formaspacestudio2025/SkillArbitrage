@@ -1,6 +1,189 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>GitHub Pages Working</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillArbitrage | Digital Adoption & BIM Consulting</title>
+
+  <style>
+    :root {
+      --primary: #1f3c88;
+      --dark: #111827;
+      --light: #f8fafc;
+      --accent: #f59e0b;
+      --text: #374151;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, system-ui, sans-serif; }
+    body { color: var(--text); line-height: 1.6; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    section {
+      padding: 90px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
+    h2 { font-size: 2rem; margin-bottom: 20px; }
+    h3 { margin-bottom: 10px; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: #000;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: var(--light);
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .alt { background: var(--light); }
+
+    .cta {
+      text-align: center;
+      background: var(--primary);
+      color: #fff;
+      border-radius: var(--radius);
+    }
+
+    .cta p { color: #e5e7eb; }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#digital-adoption">Digital Adoption</a>
+  <a href="#bim-data">BIM Data Engineering</a>
+  <a href="#fractional">Fractional Partner</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- PAGE 1: DIGITAL ADOPTION -->
+<section id="digital-adoption" class="hero">
+  <h1>Digital Adoption & Training for AEC Firms</h1>
+  <p>
+    We help small & mid-size construction firms turn BIM tools into
+    clear workflows, confident teams, and measurable ROI —
+    without disrupting live projects.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Digital Adoption Jumpstart (30 Days)</h3>
+      <p>Fix confusion and resistance fast using your existing tools.</p>
+    </div>
+    <div class="card">
+      <h3>Team-Wide Digital Enablement</h3>
+      <p>Standardize BIM & CDE workflows across office and site.</p>
+    </div>
+  </div>
+
+  <a href="#contact" class="btn">Book Free Adoption Call</a>
+</section>
+
+<!-- PAGE 2: BIM DATA ENGINEERING -->
+<section id="bim-data" class="hero alt">
+  <h1>BIM Data Engineering & Integration Specialist</h1>
+  <p>
+    We structure, clean, and connect BIM data so it actually supports
+    planning, coordination, and decision-making.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>BIM Data Structuring</h3>
+      <p>Clean parameters, naming standards, and model logic.</p>
+    </div>
+    <div class="card">
+      <h3>System Integration</h3>
+      <p>Connect BIM with schedules, quantities, dashboards.</p>
+    </div>
+  </div>
+
+  <a href="#contact" class="btn">Discuss Your BIM Data</a>
+</section>
+
+<!-- PAGE 3: FRACTIONAL PARTNER -->
+<section id="fractional" class="hero">
+  <h1>Fractional Digital Transformation Partner</h1>
+  <p>
+    Ongoing digital leadership for firms that want consistent
+    improvement without hiring a full-time digital manager.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Monthly Digital Roadmap</h3>
+      <p>Clear priorities aligned with business growth.</p>
+    </div>
+    <div class="card">
+      <h3>Automation & KPIs</h3>
+      <p>Reduce manual work and track adoption ROI.</p>
+    </div>
+  </div>
+
+  <a href="#contact" class="btn">Explore Partnership</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="cta">
+  <h2>Book a Free Digital Consultation</h2>
+  <p>Let’s identify where your tools, workflows, and teams are stuck.</p>
+  <a href="mailto:your@email.com" class="btn">Contact Now</a>
+</section>
+
+<footer>
+  © 2026 SkillArbitrage · Digital Adoption for AEC & Construction
+</footer>
+
+</body>
 </html>
