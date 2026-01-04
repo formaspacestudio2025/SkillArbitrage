@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Adoption & Training for AEC Firms</title>
+
+  <style>
+    :root {
+      --primary: #1f3c88;
+      --secondary: #f4f6fb;
+      --accent: #f9b233;
+      --text-dark: #1a1a1a;
+      --text-light: #666;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: #fff;
+    }
+
+    section {
+      padding: 64px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      font-size: 2rem;
+    }
+
+    p {
+      color: var(--text-light);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), #14264d);
+      color: #fff;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: #e5e9ff;
+      max-width: 720px;
+      margin: 0 auto 32px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: #000;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* SERVICES */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--secondary);
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e1e7ff;
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin-top: 12px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--text-light);
+    }
+
+    /* WHO */
+    .who {
+      background: var(--secondary);
+      border-radius: var(--radius);
+    }
+
+    /* BENEFITS */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit {
+      padding: 20px;
+      border-left: 4px solid var(--primary);
+      background: #fff;
+      border-radius: var(--radius);
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      border-radius: var(--radius);
+      padding: 60px 20px;
+    }
+
+    .cta p {
+      color: #e5e9ff;
+      margin: 16px 0 28px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Digital Adoption That Actually Works<br>for AEC & Construction Firms</h1>
+    <p>
+      We help small & mid-size AEC firms turn BIM and digital tools into
+      clear workflows, confident teams, and measurable ROI — without disrupting live projects.
+    </p>
+    <a href="#contact" class="btn">Book Free Digital Adoption Call</a>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
+    <h2>Productized Digital Adoption Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag">30-Day Quick Win</span>
+        <h3>Digital Adoption Jumpstart</h3>
+        <p>Fix confusion, resistance, and under-utilization fast.</p>
+        <ul>
+          <li>Clear role-based workflows</li>
+          <li>Tool & process cleanup</li>
+          <li>Hands-on team training</li>
+          <li>Immediate productivity gains</li>
+        </ul>
+        <p><strong>Timeline:</strong> 3–4 weeks</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Core Program</span>
+        <h3>Team-Wide Digital Enablement</h3>
+        <p>Standardize BIM & CDE usage across office and site.</p>
+        <ul>
+          <li>Documented digital standards</li>
+          <li>Role-specific training paths</li>
+          <li>Reduced rework & re-training</li>
+          <li>Scalable workflows</li>
+        </ul>
+        <p><strong>Timeline:</strong> 8–10 weeks</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Premium Retainer</span>
+        <h3>Fractional Digital Transformation Partner</h3>
+        <p>Ongoing leadership-level digital guidance.</p>
+        <ul>
+          <li>Continuous optimization</li>
+          <li>Automation & KPI tracking</li>
+          <li>Executive reporting</li>
+          <li>On-call advisory support</li>
+        </ul>
+        <p><strong>Timeline:</strong> 6–12 months</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section class="who">
+    <h2>Who This Is For</h2>
+    <ul>
+      <li>10–100 employee AEC & construction firms</li>
+      <li>Recently adopted BIM / ACC / Revit / Navisworks</li>
+      <li>Teams dependent on 1–2 BIM champions</li>
+      <li>Firms scaling projects without digital chaos</li>
+    </ul>
+  </section>
+
+  <!-- BENEFITS -->
+  <section>
+    <h2>Why Firms Choose You</h2>
+
+    <div class="benefits">
+      <div class="benefit">No new software — maximize what you already own</div>
+      <div class="benefit">Minimum disruption to live projects</div>
+      <div class="benefit">Clear ROI and measurable adoption</div>
+      <div class="benefit">Bridges site reality with digital tools</div>
+      <div class="benefit">Reduces dependence on individuals</div>
+      <div class="benefit">Cheaper than hiring a digital manager</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="cta">
+    <h2>Stop Owning Software. Start Owning Outcomes.</h2>
+    <p>
+      Book a free digital adoption consultation and identify
+      exactly where your workflows, tools, and teams are stuck.
+    </p>
+    <a href="mailto:your@email.com" class="btn">Book Free Consultation</a>
+  </section>
+
+  <footer>
+    © 2026 Digital Adoption Consultant for AEC & Construction
+  </footer>
+
+</body>
+</html>
