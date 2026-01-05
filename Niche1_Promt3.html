@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIM Data Engineering & Analytics Integration</title>
+
+  <style>
+    :root {
+      --dark: #0b1220;
+      --dark-soft: #111827;
+      --light: #f9fafb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --border: #1f2937;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: #1f2937;
+      line-height: 1.65;
+    }
+
+    section {
+      padding: 90px 10%;
+    }
+
+    h1, h2, h3 {
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+
+    p {
+      max-width: 850px;
+      margin-bottom: 18px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #020617, #0b1220);
+      color: white;
+      padding: 130px 10%;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      max-width: 950px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #c7d2fe;
+      margin-top: 20px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 16px 34px;
+      background: var(--accent);
+      color: #020617;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    /* DARK */
+    .dark {
+      background: var(--dark);
+      color: #e5e7eb;
+    }
+
+    .dark h2,
+    .dark h3 {
+      color: white;
+    }
+
+    .dark .card {
+      background: var(--dark-soft);
+      border: 1px solid var(--border);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: var(--muted);
+      padding: 50px 10%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>The BIM Industry Is Drowning in Data — and Starving for Insight</h1>
+  <p>
+    We help construction and AEC firms turn fragmented BIM data into
+    trusted, analytics-ready intelligence through data engineering,
+    governance, and automation — not more modeling or dashboards.
+  </p>
+  <a href="#contact" class="cta">Book a BIM Data Strategy Call</a>
+</section>
+
+<!-- PROBLEM -->
+<section>
+  <h2>The Problem Isn’t BIM — It’s How BIM Data Is Implemented</h2>
+  <p>
+    Across Reddit, X, and industry discussions, the same pattern appears again and again:
+    firms have BIM data, but they cannot use it reliably for decisions.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Data-Rich, Insight-Poor</h3>
+      <p>
+        BIM is treated as geometry and documents.
+        Parameters are inconsistent, unreliable, and exported to Excel as a last resort.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Fragmented Tool Ecosystems</h3>
+      <p>
+        Revit, ACC, Navisworks, Primavera, Power BI, Excel, ERP —
+        all disconnected, with no true source of truth.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>APIs That Nobody Uses</h3>
+      <p>
+        ACC and BIM360 expose powerful APIs, but most teams lack
+        production-grade Python workflows to use them operationally.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Analytics Without Trust</h3>
+      <p>
+        Dashboards exist, but leadership doesn’t trust them —
+        because data validation and governance are missing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- POSITIONING -->
+<section class="dark">
+  <h2>Our Positioning: BIM Data Engineering for Construction</h2>
+  <p>
+    The industry doesn’t need more BIM managers, trainers, or “pretty dashboards”.
+    It needs applied data engineering that makes BIM data trustworthy, connected,
+    and decision-grade.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>❌ Typical BIM Services</h3>
+      <p>
+        • Modeling & coordination<br>
+        • Tool-based training<br>
+        • One-off dashboards<br>
+        • Manual data exports
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>✅ What We Deliver</h3>
+      <p>
+        • BIM data architecture & schemas<br>
+        • ETL pipelines (BIM → Analytics)<br>
+        • Governance & QA automation<br>
+        • Trusted, decision-grade KPIs
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h2>Core Service Offerings</h2>
+  <p>
+    Modular, outcome-focused services designed to close the biggest
+    BIM data gaps identified across the industry.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>BIM Data Readiness & Audit</h3>
+      <p>
+        Assess model health, parameter consistency, classification,
+        and analytics readiness — with a clear remediation roadmap.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Data Engineering & Governance</h3>
+      <p>
+        Design structured BIM schemas, validation rules,
+        QA scripts, and data ownership frameworks.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>BIM API & Analytics Integration</h3>
+      <p>
+        Build automated pipelines from ACC / BIM360 / Navisworks
+        into Python, Power BI, or data warehouses.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Predictive & ROI Analytics</h3>
+      <p>
+        Move beyond counts and charts — forecast clash risk,
+        coordination efficiency, and data completeness trends.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NOW -->
+<section class="dark">
+  <h2>Why This Matters Now</h2>
+  <p>
+    BIM adoption is accelerating, but data maturity is lagging.
+    Firms that don’t fix data structure, governance, and integration now
+    will struggle with AI, digital twins, and predictive workflows later.
+  </p>
+
+  <p>
+    The competitive advantage is no longer better models —
+    it’s better data.
+  </p>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <h2>Start With Data Clarity — Not Another Tool</h2>
+  <p>
+    If your BIM data looks impressive but cannot answer
+    real project or business questions, it’s time to engineer the foundation.
+  </p>
+  <a href="#" class="cta">Request a BIM Data Diagnostic</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 — BIM Data Engineering & Analytics Integration for Construction</p>
+</footer>
+
+</body>
+</html>
